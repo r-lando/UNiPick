@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Register - UNiPick</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/img/logo.png" rel="icon">
+  <link href="assets/img/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceShop
+  * Template URL: https://bootstrapmade.com/niceshop-bootstrap-ecommerce-template/
+  * Updated: Aug 26 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="register-page">
+
+  <header id="header" class="header sticky-top">
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/img/logo.png" alt="">
+            <h1 class="sitename">UNiPick</h1>
+          </a>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+
+            <!-- Account -->
+            <div class="dropdown account-dropdown">
+              <button class="header-action-btn" data-bs-toggle="dropdown">
+                <i class="bi bi-person"></i>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-header">
+                  <h6>Welcome to <span class="sitename">UNiPick</span></h6>
+                  <p class="mb-0">Access account &amp; manage orders</p>
+                </div>
+                <div class="dropdown-body">
+                  <a class="dropdown-item d-flex align-items-center" href="account.html">
+                    <i class="bi bi-person-circle me-2"></i>
+                    <span>My Profile</span>
+                  </a>
+                </div>
+                <div class="dropdown-footer">
+                  <a href="login.html" class="btn btn-primary w-100 mb-2">Sign In</a>
+                  <a href="register.html" class="btn btn-outline-primary w-100">Register</a>
+                </div>
+              </div>
+            </div>
+
+
+        
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
+        
+
+<!-- Bootstrap Icons (for bell + inbox icons) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+  .notif-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .notif-btn {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .notif-btn:hover {
+    color: #007bff;
+  }
+
+  /* Panel box */
+  .notif-panel {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    width: 260px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  .notif-panel h4 {
+    margin: 0;
+    padding: 10px;
+    background: #001c6e;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .notif-list {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .notif-item {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+  }
+
+  .notif-item:last-child {
+    border-bottom: none;
+  }
+
+  .no-notif {
+    text-align: center;
+    color: #777;
+    padding: 25px 10px;
+  }
+
+  .no-notif i {
+    font-size: 2rem;
+    color: #ccc;
+  }
+
+  .no-notif p {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  const notifBtn = document.getElementById('notifBtn');
+  const notifPanel = document.getElementById('notifPanel');
+  const notifList = document.getElementById('notifList');
+
+  // Example: store notifs here
+  let notifications = [];
+
+  notifBtn.addEventListener('click', () => {
+    // Toggle panel visibility
+    notifPanel.style.display = notifPanel.style.display === 'block' ? 'none' : 'block';
+
+    // Update content depending on notif count
+    if (notifications.length === 0) {
+      notifList.innerHTML = `
+        <div class="no-notif">
+          <i class="bi bi-inbox"></i>
+          <p>No notifications yet</p>
+        </div>
+      `;
+    } else {
+      notifList.innerHTML = notifications.map(n => `
+        <div class="notif-item">${n}</div>
+      `).join('');
+    }
+  });
+
+  // Optional: click outside to close
+  document.addEventListener('click', (e) => {
+    if (!notifContainer.contains(e.target)) {
+      notifPanel.style.display = 'none';
+    }
+  });
+</script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="header-nav">
+      <div class="container-fluid container-xl position-relative">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for products">
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Register</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Register</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Register Section -->
+    <section id="register" class="register section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="registration-form-wrapper">
+              <div class="form-header text-center">
+                <h2>Create Your Account</h2>
+                <p>Create your account and start shopping with us</p>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-8 mx-auto">
+                  <form id="register-form">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name" required="" autocomplete="name">
+                      <label for="fullName">Full Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required="" autocomplete="email">
+                      <label for="email">Email Address</label>
+                    </div>
+
+                    <div class="row mb-3">
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" minlength="8" autocomplete="new-password">
+                          <label for="password">Password</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-floating">
+                          <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required="" minlength="8" autocomplete="new-password">
+                          <label for="confirmPassword">Confirm Password</label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-floating mb-4">
+                    <input 
+                    type="number" 
+                    class="form-control no-spinner" 
+                    id="contactNumber" 
+                    name="contactNumber" 
+                    placeholder="Contact Number" 
+                    required
+                    maxlength="11"
+                    oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 11);">
+                    <label for="contactNumber">Contact Number</label>
+                    </div>
+
+                    <style>
+                    input.no-spinner::-webkit-outer-spin-button,
+                    input.no-spinner::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                    }
+
+                    input.no-spinner[type=number] {
+                    appearance: textfield;
+                    -moz-appearance: textfield;
+                    }
+                    </style>
+                    <div class="form-floating mb-4">
+                      <select class="form-control" id="accountType" name="accountType" required>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                      </select>
+                      <label for="accountType">Account Type</label>
+                    </div>
+
+                    <div class="form-check mb-4">
+                      <input class="form-check-input" type="checkbox" id="termsCheck" name="termsCheck" required="">
+                      <label class="form-check-label" for="termsCheck">
+                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                      </label>
+                    </div>
+
+                    <div class="form-check mb-4">
+                      <input class="form-check-input" type="checkbox" id="marketingCheck" name="marketingCheck">
+                      <label class="form-check-label" for="marketingCheck">
+                        I would like to receive marketing communications about products, services, and promotions
+                      </label>
+                    </div>
+
+                    <div class="d-grid mb-4">
+                      <button type="submit" class="btn btn-register">Create Account</button>
+                    </div>
+
+                    <div class="login-link text-center">
+                      <p>Already have an account? <a href="login.html">Sign in</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="social-login">
+                <div class="row">
+                  <div class="col-lg-8 mx-auto">
+                    <div class="divider">
+                      <span>or sign up with</span>
+                    </div>
+                    <div class="social-buttons">
+                      <a href="#" class="btn btn-social">
+                        <i class="bi bi-google"></i>
+                        <span>Google</span>
+                      </a>
+                      <a href="#" class="btn btn-social">
+                        <i class="bi bi-facebook"></i>
+                        <span>Facebook</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="decorative-elements">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+                <div class="circle circle-3"></div>
+                <div class="square square-1"></div>
+                <div class="square square-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Register Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget footer-about">
+              <a href="index.html" class="logo">
+                <span class="sitename">UNiPick</span>
+              </a>
+              <p>Your dedicated web-based platform for official University of Northern Philippines (UNP) merchandise. Discover the latest shirts, hoodies, lanyards, and accessories to show your school pride, and enjoy a convenient, secure shopping experience designed for students, faculty, and alumni. Skip the limitations of physical stalls and shop anytime, anywhere.</p>
+
+              <div class="social-links mt-4">
+                <h5>Connect With Us</h5>
+                <div class="social-icons">
+                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Shop</h4>
+              <ul class="footer-links">
+                <li><a href="category.html">All Products</a></li>
+                <li><a href="category.html?cat=Clothing">Clothing</a></li>
+                <li><a href="category.html?cat=Bag">Bag</a></li>
+                <li><a href="category.html?cat=Accessories">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Support</h4>
+              <ul class="footer-links">
+                <li><a href="support.html">Help Center</a></li>
+                <li><a href="account.html">Order Status</a></li>
+                <li><a href="return-policy.html">Returns &amp; Exchanges</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <h4>Contact Information</h4>
+              <div class="footer-contact">
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>H96M+F3X, Vigan City, Ilocos Sur</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <span>hello@example.com</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-clock"></i>
+                  <span>Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm<br>Sunday: Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="sitename">NiceShop</strong>. All Rights Reserved.</p>
+            </div>
+            <div class="credits mt-1">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you've purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center align-items-center gap-4">
+              <div class="payment-methods">
+                <div class="payment-icons">
+                  <i class="bi bi-credit-card" aria-label="Credit Card"></i>
+                  <i class="bi bi-paypal" aria-label="PayPal"></i>
+                  <i class="bi bi-apple" aria-label="Apple Pay"></i>
+                  <i class="bi bi-google" aria-label="Google Pay"></i>
+                  <i class="bi bi-shop" aria-label="Shop Pay"></i>
+                  <i class="bi bi-cash" aria-label="Cash on Delivery"></i>
+                </div>
+              </div>
+
+              <div class="legal-links">
+                <a href="tos.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="tos.html">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/vendor/drift-zoom/Drift.min.js"></script>
+  <script src="assets/vendor/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/js/main.js"></script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { 
+    getAuth, 
+    createUserWithEmailAndPassword, 
+    updateProfile 
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
+  import {
+    getFirestore,
+    doc,
+    setDoc
+  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA6f-crfOeE4e7gDr8gNolAzqIqBsUqg7Y",
+    authDomain: "unipick-e-commerce-web-app.firebaseapp.com",
+    projectId: "unipick-e-commerce-web-app",
+    storageBucket: "unipick-e-commerce-web-app.firebasestorage.app",
+    messagingSenderId: "315041934524",
+    appId: "1:315041934524:web:ba357dc818f868c19f74b9"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const registerForm = document.getElementById("register-form");
+
+  registerForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const contactNumber = document.getElementById("contactNumber").value;
+    const accountType = document.getElementById("accountType").value;
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      await updateProfile(user, { displayName: fullName });
+
+      await setDoc(doc(db, "users", user.uid), {
+        fullName,
+        email,
+        contactNumber,
+        createdAt: new Date(),
+        role: accountType
+      });
+
+      alert("Account created successfully!");
+      window.location.href = "login.html";
+
+    } catch (error) {
+      alert(error.message);
+    }
+  });
+</script>
+
+<script>
+  // Auto-select Admin role if coming from admin_login.html
+  const urlParams = new URLSearchParams(window.location.search);
+  const role = urlParams.get("role");
+
+  const accountTypeSelect = document.getElementById("accountType");
+
+  if (role === "admin") {
+    accountTypeSelect.value = "admin";
+  }
+</script>
+
+</body>
+
+</html>

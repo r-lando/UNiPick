@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>UNiPick</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/img/logo.png" rel="icon">
+  <link href="assets/img/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceShop
+  * Template URL: https://bootstrapmade.com/niceshop-bootstrap-ecommerce-template/
+  * Updated: Aug 26 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+    
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/img/logo.png" alt=""> 
+            <h1 class="sitename" style="color: #001c6e; ">UNiPick</h1>
+          </a>
+
+          <!-- Search -->
+          <form class="search-form desktop-search-form">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for products">
+              <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end">
+
+            <!-- Mobile Search Toggle -->
+            <button class="header-action-btn mobile-search-toggle d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSearch" aria-expanded="false" aria-controls="mobileSearch">
+              <i class="bi bi-search"></i>
+            </button>
+            <!-- Account Dropdown -->
+            <div class="dropdown account-dropdown">
+              <button class="header-action-btn" data-bs-toggle="dropdown">
+                <i class="bi bi-person"></i>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-header">
+                  <h6>Welcome to <span class="sitename">UNiPick</span></h6>
+                  <p class="mb-0">Access account &amp; manage orders</p>
+                </div>
+                <div class="dropdown-body">
+                  <a class="dropdown-item d-flex align-items-center" href="account.html">
+                    <i class="bi bi-person-circle me-2"></i>
+                    <span>My Profile</span>
+                  </a>
+                </div>
+                <div class="dropdown-footer">
+                  <a href="login.html" class="btn btn-primary w-100 mb-2">Sign In</a>
+                  <a href="register.html" class="btn btn-outline-primary w-100">Register</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cart -->
+            <a href="cart.html" class="header-action-btn">
+              <i class="bi bi-cart3"></i>
+              <span class="badge" id="cart-badge-count">0</span>
+            </a>
+
+            <!-- Notification Bell -->
+            <div class="notif-container">
+              <button id="notifBtn" class="notif-btn">
+                <i class="bi bi-bell"></i>
+              </button>
+
+              <!-- Notification Panel -->
+              <div id="notifPanel" class="notif-panel">
+                <h4>Notifications</h4>
+                <div id="notifList" class="notif-list empty">
+                  <div class="no-notif">
+                    <i class="bi bi-inbox"></i>
+                    <p>No notifications yet</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
+
+
+<!-- Bootstrap Icons (for bell + inbox icons) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+            <style>
+              .notif-container {
+                position: relative;
+                display: inline-block;
+              }
+
+              .notif-btn {
+                background: none;
+                border: none;
+                font-size: 1.6rem;
+                color: #333;
+                cursor: pointer;
+                position: relative;
+              }
+
+              .notif-btn:hover {
+                color: #007bff;
+              }
+
+              /* Panel box */
+              .notif-panel {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 40px;
+                width: 260px;
+                background: #fff;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                z-index: 100;
+                overflow: hidden;
+                animation: fadeIn 0.2s ease-in-out;
+              }
+
+              .notif-panel h4 {
+                margin: 0;
+                padding: 10px;
+                background: #001c6e;
+                color: #fff;
+                font-size: 1rem;
+                text-align: center;
+              }
+
+              .notif-list {
+                max-height: 250px;
+                overflow-y: auto;
+              }
+
+              .notif-item {
+                padding: 10px;
+                border-bottom: 1px solid #f0f0f0;
+                font-size: 0.9rem;
+              }
+
+              .notif-item:last-child {
+                border-bottom: none;
+              }
+
+              .no-notif {
+                text-align: center;
+                color: #777;
+                padding: 25px 10px;
+              }
+
+              .no-notif i {
+                font-size: 2rem;
+                color: #ccc;
+              }
+
+              .no-notif p {
+                margin: 10px 0 0;
+                font-size: 0.9rem;
+              }
+
+              @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+<script>
+  const notifBtn = document.getElementById('notifBtn');
+  const notifPanel = document.getElementById('notifPanel');
+  const notifList = document.getElementById('notifList');
+
+  // Example: store notifs here
+  let notifications = [];
+
+  notifBtn.addEventListener('click', () => {
+    // Toggle panel visibility
+    notifPanel.style.display = notifPanel.style.display === 'block' ? 'none' : 'block';
+
+    // Update content depending on notif count
+    if (notifications.length === 0) {
+      notifList.innerHTML = `
+        <div class="no-notif">
+          <i class="bi bi-inbox"></i>
+          <p>No notifications yet</p>
+        </div>
+      `;
+    } else {
+      notifList.innerHTML = notifications.map(n => `
+        <div class="notif-item">${n}</div>
+      `).join('');
+    }
+  });
+
+  // Optional: click outside to close
+  document.addEventListener('click', (e) => {
+    if (!notifContainer.contains(e.target)) {
+      notifPanel.style.display = 'none';
+    }
+  });
+</script>
+
+    <!-- Navigation -->
+    <div class="header-nav">
+      <div class="container-fluid container-xl position-relative">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for products">
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="content-wrapper" data-aos="fade-up" data-aos-delay="100">
+            <h1 class="hero-title">Discover Amazing Products</h1>
+            <p class="hero-description">Show your UNP pride with style! Discover exclusive campus merchandise crafted for students, alumni, and true UNP fans.</p>
+            <div class="hero-actions" data-aos="fade-up" data-aos-delay="200">
+              <a href="category.html" class="btn-primary">Shop Now</a>
+
+            </div>
+            <div class="features-list" data-aos="fade-up" data-aos-delay="300">
+              <div class="feature-item">
+                <i class="bi bi-award"></i>
+                <span>Quality Guarantee</span>
+              </div>
+              <div class="feature-item">
+                <i class="bi bi-headset"></i>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visuals">
+          <div class="product-showcase" data-aos="fade-left" data-aos-delay="200">
+            <div class="product-card featured">
+              <img src="assets/img/img/product/product-2.jpg" alt="Featured Product" class="img-fluid">
+              <div class="product-badge">Best Seller</div>
+              <div class="product-info">
+                <h4>CCIT Trojan Intramural Shirt</h4>
+                <div class="price">
+                  <span class="sale-price">PHP 300-400</span>
+                  <span class="original-price">PHP 500</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-grid">
+              <div class="product-mini" data-aos="zoom-in" data-aos-delay="400">
+                <img src="assets/img/img/product/product-3.jpg" alt="Product" class="img-fluid">
+                <span class="mini-price">PHP 400</span>
+              </div>
+              <div class="product-mini" data-aos="zoom-in" data-aos-delay="500">
+                <img src="assets/img/img/product/product-5.jpg" alt="Product" class="img-fluid">
+                <span class="mini-price">PHP 400</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-elements">
+            <div class="floating-icon cart" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-cart3"></i>
+              <span class="notification-dot">3</span>
+            </div>
+            <div class="floating-icon wishlist" data-aos="fade-up" data-aos-delay="700">
+              <i class="bi bi-heart"></i>
+            </div>
+            <div class="floating-icon search" data-aos="fade-up" data-aos-delay="800">
+              <i class="bi bi-search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Best Sellers Section -->
+    <section id="best-sellers" class="best-sellers section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Best Sellers</h2>
+        <p>Our top available products</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div id="bestSellerContainer" class="row g-5">
+          <!-- Dynamic Best Sellers will be injected here by JS -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Cards Section -->
+    <section id="cards" class="cards section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <!-- Trending Now -->
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="product-category">
+              <h3 class="category-title">
+                <i class="bi bi-fire"></i> Trending Now
+              </h3>
+              <div class="product-list" id="trending-list">
+                <!-- dynamic trending items -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Best Sellers (side list) -->
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="product-category">
+              <h3 class="category-title">
+                <i class="bi bi-award"></i> Best Sellers
+              </h3>
+              <div class="product-list" id="bestseller-list">
+                <!-- dynamic best seller items -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Items -->
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="product-category">
+              <h3 class="category-title">
+                <i class="bi bi-star"></i> Featured Items
+              </h3>
+              <div class="product-list" id="featured-list">
+                <!-- dynamic featured items -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+<!-- /Cards Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget footer-about">
+              <a href="index.html" class="logo">
+                <span class="sitename">UNiPick</span>
+              </a>
+              <p>Your dedicated web-based platform for official University of Northern Philippines (UNP) merchandise. Discover the latest shirts, hoodies, lanyards, and accessories to show your school pride, and enjoy a convenient, secure shopping experience designed for students, faculty, and alumni. Skip the limitations of physical stalls and shop anytime, anywhere.</p>
+
+              <div class="social-links mt-4">
+                <h5>Connect With Us</h5>
+                <div class="social-icons">
+                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Shop</h4>
+              <ul class="footer-links">
+                <li><a href="category.html">All Products</a></li>
+                <li><a href="category.html?cat=Clothing">Clothing</a></li>
+                <li><a href="category.html?cat=Bag">Bag</a></li>
+                <li><a href="category.html?cat=Accessories">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Support</h4>
+              <ul class="footer-links">
+                <li><a href="support.html">Help Center</a></li>
+                <li><a href="account.html">Order Status</a></li>
+                <li><a href="return-policy.html">Returns &amp; Exchanges</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <h4>Contact Information</h4>
+              <div class="footer-contact">
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>H96M+F3X, Vigan City, Ilocos Sur</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <span>hello@example.com</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-clock"></i>
+                  <span>Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm<br>Sunday: Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="sitename">NiceShop</strong>. All Rights Reserved.</p>
+            </div>
+            <div class="credits mt-1">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you've purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center align-items-center gap-4">
+              <div class="payment-methods">
+                <div class="payment-icons">
+                  <i class="bi bi-credit-card" aria-label="Credit Card"></i>
+                  <i class="bi bi-paypal" aria-label="PayPal"></i>
+                  <i class="bi bi-apple" aria-label="Apple Pay"></i>
+                  <i class="bi bi-google" aria-label="Google Pay"></i>
+                  <i class="bi bi-shop" aria-label="Shop Pay"></i>
+                  <i class="bi bi-cash" aria-label="Cash on Delivery"></i>
+                </div>
+              </div>
+
+              <div class="legal-links">
+                <a href="tos.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="tos.html">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/vendor/drift-zoom/Drift.min.js"></script>
+  <script src="assets/vendor/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/js/main.js"></script>
+
+  <!-- Firebase JS SDK -->
+  <script src="assets/js/js/index.js" type="module"></script>
+  <script type="module" src="assets/js/js/cartBadgeListener.js"></script>
+  <script type="module" src="assets/js/js/globalAddToCart.js"></script>
+  </body>
+</html>

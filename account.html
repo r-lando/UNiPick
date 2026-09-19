@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>UNiPick</title>
+  <meta name="description" content="Manage your UNiPick account settings">
+  <meta name="keywords" content="account, profile, settings, unipick">
+
+  <!-- Favicons -->
+  <link href="assets/img/img/logo.png" rel="icon">
+  <link href="assets/img/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/vendor/drift-zoom/drift-basic.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Account page specific tweaks */
+
+    body {
+      background-color: #f5f5f9;
+    }
+
+    .account-section {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    .account-sidebar .avatar-wrapper {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      margin: 0 auto;
+    }
+
+    .account-sidebar img {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #001c6e;
+    }
+
+    .account-sidebar .change-photo-btn {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: #001c6e;
+      color: #fff;
+      border-radius: 50%;
+      border: none;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .account-nav .nav-link {
+      border-radius: 10px;
+      color: #555;
+      font-weight: 500;
+      padding: 0.6rem 0.85rem;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      background: transparent;
+      border: none;
+    }
+
+    .account-nav .nav-link i {
+      font-size: 1.1rem;
+    }
+
+    .account-nav .nav-link.active {
+      background-color: #001c6e;
+      color: #fff;
+    }
+
+    .account-nav .nav-link:hover {
+      background-color: rgba(0, 28, 110, 0.06);
+    }
+    
+    .account-nav .nav-link.active:hover {
+       background-color: #001c6e;
+    }
+
+    .account-tab {
+      display: none;
+    }
+
+    .account-tab.active-tab {
+      display: block;
+    }
+
+    .form-section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #001c6e;
+      margin-bottom: 1rem;
+    }
+
+    .settings-form .form-label {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    .settings-form .form-control {
+      border-radius: 8px;
+    }
+
+    .settings-form .btn-primary {
+      background-color: #001c6e;
+      border-color: #001c6e;
+    }
+
+    .badge-pill {
+      border-radius: 50rem;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.7rem;
+    }
+  </style>
+</head>
+
+<body class="account-page">
+
+  <!-- HEADER (same style as index.html) -->
+  <header id="header" class="header sticky-top">
+
+    <!-- Main Header -->
+    <div class="main-header">
+      <div class="container-fluid container-xl">
+        <div class="d-flex py-3 align-items-center justify-content-between">
+
+          <!-- Logo -->
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/img/logo.png" alt="">
+            <h1 class="sitename" style="color: #001c6e;">UNiPick</h1>
+          </a>
+
+          <!-- Actions -->
+          <div class="header-actions d-flex align-items-center justify-content-end gap-2">
+
+            <!-- Account Dropdown -->
+            <div class="dropdown account-dropdown">
+              <button class="header-action-btn" data-bs-toggle="dropdown">
+                <i class="bi bi-person"></i>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-header">
+                  <h6>Welcome to <span class="sitename">UNiPick</span></h6>
+                  <p class="mb-0">Access account &amp; manage orders</p>
+                </div>
+                <div class="dropdown-body">
+                  <a class="dropdown-item d-flex align-items-center" href="account.html">
+                    <i class="bi bi-person-circle me-2"></i>
+                    <span>My Profile</span>
+                  </a>
+                </div>
+                <div class="dropdown-footer">
+                  <a href="login.html" class="btn btn-primary w-100 mb-2">Sign In</a>
+                  <a href="register.html" class="btn btn-outline-primary w-100">Register</a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Mobile Navigation Toggle -->
+            <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="header-nav">
+      <div class="container-fluid container-xl position-relative">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="category.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Search Form -->
+    <div class="collapse" id="mobileSearch">
+      <div class="container">
+        <form class="search-form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for products">
+            <button class="btn" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Account Section -->
+    <section class="account-section section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-4">
+
+          <!-- SIDEBAR -->
+          <div class="col-lg-3">
+            <div class="card shadow-sm border-0 account-sidebar">
+              <div class="card-body">
+                <div class="user-info text-center mb-3">
+                  <div class="avatar-wrapper mb-2">
+                    <img id="profileImagePreview" src="assets/img/img/user-placeholder.png" alt="Profile">
+                    <button type="button" class="change-photo-btn" id="triggerProfileInput">
+                      <i class="bi bi-camera"></i>
+                    </button>
+                  </div>
+                  <h4 class="mb-0" style="font-size: 1.1rem;">My Account</h4>
+                  <p class="text-muted small mb-1" id="sidebarEmail">user@example.com</p>
+                  <span class="badge bg-light text-dark border badge-pill">
+                    <i class="bi bi-patch-check-fill text-primary me-1"></i> Verified Member
+                  </span>
+                </div>
+
+                <hr>
+
+                <nav class="nav flex-column account-nav mb-3">
+                  <button class="nav-link active" type="button" data-target="profile-tab">
+                    <i class="bi bi-person"></i> Profile
+                  </button>
+                  <!-- ADDED MY ORDERS BUTTON -->
+                  <button class="nav-link" type="button" data-target="orders-tab">
+                    <i class="bi bi-bag-check"></i> My Orders
+                  </button>
+                  <button class="nav-link" type="button" data-target="security-tab">
+                    <i class="bi bi-shield-lock"></i> Security
+                  </button>
+                  <button class="nav-link" type="button" data-target="danger-tab">
+                    <i class="bi bi-exclamation-triangle"></i> Danger Zone
+                  </button>
+                </nav>
+
+                <button type="button" class="btn btn-outline-danger w-100" id="logoutBtn">
+                  <i class="bi bi-box-arrow-right me-1"></i> Log out
+                </button>
+
+                <!-- Hidden file input for avatar -->
+                <input type="file" id="profileImageInput" accept="image/*" class="d-none">
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTENT -->
+          <div class="col-lg-9">
+
+            <!-- PROFILE TAB -->
+            <div class="card shadow-sm border-0 mb-4 account-tab active-tab" id="profile-tab">
+              <div class="card-body">
+                <h5 class="mb-1">Profile Information</h5>
+                <p class="text-muted small mb-4">Update your basic info and contact details.</p>
+
+                <form class="settings-form" id="profileForm">
+                  <div class="row g-3">
+
+                    <div class="col-md-6">
+                      <label for="firstName" class="form-label">First Name</label>
+                      <input type="text" id="firstName" class="form-control" placeholder="Enter first name" required>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="lastName" class="form-label">Last Name</label>
+                      <input type="text" id="lastName" class="form-control" placeholder="Enter last name" required>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Email Address</label>
+                      <input type="email" id="email" class="form-control" placeholder="yourname@email.com" required>
+                      <div class="form-text">Changing your email will require password confirmation.</div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="tel" id="phone" class="form-control" placeholder="+63 9XX XXX XXXX">
+                    </div>
+
+                    <div class="col-12">
+                      <hr>
+                      <div class="d-flex justify-content-end gap-2">
+                        <button type="reset" class="btn btn-light">Reset</button>
+                        <button type="submit" class="btn btn-primary" id="saveProfileBtn">
+                          <i class="bi bi-save me-1"></i> Save Changes
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- ORDERS TAB (NEW) -->
+            <div class="card shadow-sm border-0 mb-4 account-tab" id="orders-tab">
+              <div class="card-body">
+                <h5 class="mb-1">My Orders</h5>
+                <p class="text-muted small mb-4">View and track your recent orders.</p>
+                
+                <div id="orders-list-container">
+                  <!-- Orders will be injected here via JS -->
+                  <div class="text-center py-4">
+                    <span class="spinner-border text-primary"></span> Loading orders...
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECURITY TAB -->
+            <div class="card shadow-sm border-0 mb-4 account-tab" id="security-tab">
+              <div class="card-body">
+                <h5 class="mb-1">Security</h5>
+                <p class="text-muted small mb-4">Change your password to keep your account secure.</p>
+
+                <form class="settings-form" id="passwordForm">
+                  <div class="row g-3">
+
+                    <div class="col-12">
+                      <label for="currentPassword" class="form-label">Current Password</label>
+                      <input type="password" id="currentPassword" class="form-control" placeholder="Enter current password" required>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="newPassword" class="form-label">New Password</label>
+                      <input type="password" id="newPassword" class="form-control" placeholder="Enter new password" required>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                      <input type="password" id="confirmPassword" class="form-control" placeholder="Re-enter new password" required>
+                    </div>
+
+                    <div class="col-12">
+                      <hr>
+                      <div class="d-flex justify-content-end gap-2">
+                        <button type="reset" class="btn btn-light">Reset</button>
+                        <button type="submit" class="btn btn-primary" id="savePasswordBtn">
+                          <i class="bi bi-shield-lock-fill me-1"></i> Update Password
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- DANGER TAB -->
+            <div class="card shadow-sm border-0 account-tab" id="danger-tab">
+              <div class="card-body">
+                <h5 class="mb-1 text-danger">Danger Zone</h5>
+                <p class="text-muted small mb-3">
+                  These actions are permanent. Please be careful.
+                </p>
+
+                <div class="border rounded-3 p-3 d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+                  <div>
+                    <h6 class="mb-1 text-danger">Delete Account</h6>
+                    <p class="mb-0 small text-muted">
+                      This will permanently delete your account, orders history, and profile data. This action cannot be undone.
+                    </p>
+                  </div>
+                  <button type="button" class="btn btn-outline-danger mt-3 mt-md-0" data-bs-toggle="modal" data-bs-target="#deleteAccountModal" id="deleteAccountBtn">
+                    <i class="bi bi-trash3 me-1"></i> Delete Account
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER (simplified, matching style) -->
+  <footer id="footer" class="footer dark-background">
+    <div class="footer-main">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget footer-about">
+              <a href="index.html" class="logo">
+                <span class="sitename">UNiPick</span>
+              </a>
+              <p>Your dedicated web-based platform for official University of Northern Philippines (UNP) merchandise. Discover the latest shirts, hoodies, lanyards, and accessories to show your school pride, and enjoy a convenient, secure shopping experience designed for students, faculty, and alumni. Skip the limitations of physical stalls and shop anytime, anywhere.</p>
+
+              <div class="social-links mt-4">
+                <h5>Connect With Us</h5>
+                <div class="social-icons">
+                  <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Shop</h4>
+              <ul class="footer-links">
+                <li><a href="category.html">All Products</a></li>
+                <li><a href="category.html?cat=Clothing">Clothing</a></li>
+                <li><a href="category.html?cat=Bag">Bag</a></li>
+                <li><a href="category.html?cat=Accessories">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="footer-widget">
+              <h4>Support</h4>
+              <ul class="footer-links">
+                <li><a href="support.html">Help Center</a></li>
+                <li><a href="account.html">Order Status</a></li>
+                <li><a href="return-policy.html">Returns &amp; Exchanges</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-widget">
+              <h4>Contact Information</h4>
+              <div class="footer-contact">
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>H96M+F3X, Vigan City, Ilocos Sur</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <span>hello@example.com</span>
+                </div>
+                <div class="contact-item">
+                  <i class="bi bi-clock"></i>
+                  <span>Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm<br>Sunday: Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row gy-3 align-items-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="copyright">
+              <p>© <span>Copyright</span> <strong class="sitename">NiceShop</strong>. All Rights Reserved.</p>
+            </div>
+            <div class="credits mt-1">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you've purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+              Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="d-flex flex-wrap justify-content-lg-end justify-content-center align-items-center gap-4">
+              <div class="payment-methods">
+                <div class="payment-icons">
+                  <i class="bi bi-credit-card" aria-label="Credit Card"></i>
+                  <i class="bi bi-paypal" aria-label="PayPal"></i>
+                  <i class="bi bi-apple" aria-label="Apple Pay"></i>
+                  <i class="bi bi-google" aria-label="Google Pay"></i>
+                  <i class="bi bi-shop" aria-label="Shop Pay"></i>
+                  <i class="bi bi-cash" aria-label="Cash on Delivery"></i>
+                </div>
+              </div>
+
+              <div class="legal-links">
+                <a href="tos.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="tos.html">Cookies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Delete Account Modal -->
+  <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="deleteAccountModalLabel">
+            <i class="bi bi-exclamation-triangle-fill me-1"></i> Delete Account
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">
+            Are you sure you want to permanently delete your account? This action cannot be undone.
+          </p>
+          <div class="mb-3">
+            <label for="deletePassword" class="form-label">Confirm your password</label>
+            <input type="password" class="form-control" id="deletePassword" placeholder="Enter your password">
+            <div class="form-text">
+              We need your password to confirm it's really you.
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteAccountBtn">
+            <i class="bi bi-trash3 me-1"></i> Delete Anyway
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cancel Order Modal -->
+  <div class="modal fade" id="cancelOrderModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cancel Order</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to cancel this order?</p>
+        <p class="text-muted small">This will permanently remove the order record.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">No, Keep it</button>
+        <button type="button" class="btn btn-danger" id="confirmCancelOrderBtn">
+          Yes, Cancel Order
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/vendor/drift-zoom/Drift.min.js"></script>
+  <script src="assets/vendor/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/js/main.js"></script>
+
+  <!-- ACCOUNT + FIREBASE LOGIC -->
+  <script src="assets/js/js/account.js" type="module"></script>
+</body>
+
+</html>
